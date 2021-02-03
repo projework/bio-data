@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INVOICE</title>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+ 
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+	
+<style>
+.container{
+	vertical-align: middle;
+	width: 50%;
+}
+
+.head{
+
+	background-color: rgb(202, 202, 243);
+	margin-top: 20px;
+	
+	
+}
+.inline{
+
+	display: inline-flex;
+
+}
+.clor{
+
+	color: rgb(152, 152, 247);
+}
+.invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+    
+}
+
+.table > tbody > tr > .no-line {
+    border-top: none;
+}
+
+.table > thead > tr > .no-line {
+    border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
+}
+
+
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+    		<div class="row invoice-title head">
+				<div class="col-xs-8 inline "  >
+					<img src="image/logo.png" alt="logo" height="15%;" width="15%;" />
+					<h1><strong>INVOICE</strong></h1>
+    			
+				</div>
+    			
+    			<div class="col-xs-2 text-center-left "><br>
+    				<address >
+        			<span><strong>647-444-1234</strong><br></span>
+					<span>your@email.com<br></span>
+    				<span>	yourwebsite.com<br></span>
+    					
+    				</address>
+				</div>
+				<div class="col-xs-2 text-right"><br>
+    				<address>
+						<span><strong>your address</strong><br></span>
+						<span>city,state,country<br></span>	
+						<span>ZIP CODE<br></span>	
+    					
+    				</address>
+    			</div>
+    		</div>
+    		<hr>
+    		<div class="row">
+    			<div class="col-xs-2">
+    				<address>
+						<span><strong>Billed To:</strong><br></span>
+						<span>John Smith<br></span>	
+						<span>1234 Main<br></span>	
+						<span>Apt. 4B<br></span>	
+						<span>Springfield, ST 54321</span>	
+    				</address>
+				</div>
+				<div class="col-xs-2 text-center-left">
+    				<address>
+						<span><strong>Invoice Number</strong><br></span>
+						<span>00000000<br></span>	
+    					
+					</address>
+					<address>
+						<span><strong>Date Of Issue</strong><br></span>
+						<span>10/07/2021<br></span>	
+    					
+    				</address>
+    			</div>
+    			<div class="col-xs-8 text-right">
+    				<address>
+						<span><strong>Invoice Total</strong><br></span>
+						<span><h2 class="clor"><strong>Rs 4520.00</strong></h2></span>	
+    				</address>
+    			</div>
+    		</div>
+    		<!--<div class="row">
+    			<div class="col-xs-2">
+    				
+				</div>
+				<div class="col-xs-2 text-center-lef">
+    				<address>
+						<span><strong>Date Of Issue:</strong><br></span>	
+						<span>10/07/14<br><br></span>	
+    				</address>
+    			</div>
+    			<div class="col-xs-8 text-right">
+    				
+    			</div>
+    		</div>-->
+    	</div>
+    </div>
+    <hr ><strong></strong></hr>
+    <div class="row">
+    	<div class="col-md-12">
+    		<div class="panel panel-default">
+    			
+    			<div class="panel-body">
+    				<div class="table-responsive">
+    					<table class="table table-condensed">
+    						<thead>
+                                <tr>
+        							<td class="clor"><strong>Description</strong></td>
+        							<td class="text-center clor"><strong>Unit Cost</strong></td>
+        							<td class="text-center clor"><strong>Qty/Hr Rate</strong></td>
+        							<td class="text-right clor"><strong>Amount</strong></td>
+                                </tr>
+    						</thead>
+    						<tbody>
+    							<!-- foreach ($order->lineItems as $line) or some such thing here -->
+    							<tr>
+    								<td>item name</td>
+    								<td class="text-center">$1000</td>
+    								<td class="text-center">1</td>
+    								<td class="text-right">1000</td>
+    							</tr>
+                                <tr>
+        							<td>item name</td>
+    								<td class="text-center">$1000</td>
+    								<td class="text-center">3</td>
+    								<td class="text-right">1000</td>
+    							</tr>
+                                <tr>
+            						<td>item name</td>
+    								<td class="text-center">$1000</td>
+    								<td class="text-center">1</td>
+    								<td class="text-right">1000</td>
+    							</tr>
+    							<tr>
+    								<td class="thick-line"></td>
+    								<td class="thick-line"></td>
+    								<td class="thick-line text-center "><strong>Subtotal</strong></td>
+    								<td class="thick-line text-right">$670.99</td>
+    							</tr>
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center "><strong>Tax</strong></td>
+    								<td class="no-line text-right">$15</td>
+    							</tr>
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center clor"><strong>Total</strong></td>
+    								<td class="no-line text-right">$685.99</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+</body>
+</html>
